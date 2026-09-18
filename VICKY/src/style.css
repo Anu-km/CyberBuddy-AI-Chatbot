@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #020617;
+  font-family: "Fira Code", monospace;
+}
+
+/* Terminal container */
+.terminal {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: #22c55e;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.terminal-header {
+  padding: 10px 14px;
+  background: #020617;
+  border-bottom: 1px solid #22c55e33;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.status {
+  color: #22c55e;
+}
+
+/* Body */
+.terminal-body {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Logs */
+.log {
+  display: flex;
+  gap: 8px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prompt {
+  color: #38bdf8;
+}
+
+.log.user .text {
+  color: #e5e7eb;
+}
+
+.log.bot .text {
+  color: #22c55e;
+}
+
+.typing {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* Input */
+.terminal-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #22c55e33;
+  background: #020617;
+}
+
+.terminal-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e5e7eb;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.terminal-input input::placeholder {
+  color: #64748b;
+}
+
+.terminal-input button {
+  background: #22c55e;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.web-search-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.web-search-modal {
+  background: #0a0f1e;
+  border: 1px solid #22c55e;
+  border-radius: 12px;
+  padding: 20px;
+  width: min(95%, 420px);
+  box-shadow: 0 0 20px rgba(0, 255, 140, 0.25);
+}
+
+.web-search-modal h3 {
+  margin-top: 0;
+  color: #22c55e;
+}
+

@@ -1,0 +1,25 @@
+flask
+flask-cors
+python-dotenv
+pymongo
+pyjwt
+bcrypt
+pdfplumber
+pillow
+openai
+flask-socketio
+eventlet
+
+# Security & Auth
+flask-limiter
+
+# AI & NLP
+tiktoken
+groq
+
+# Vector / future knowledge base
+faiss-cpu
+
+# Utilities
+requests
+numpy
